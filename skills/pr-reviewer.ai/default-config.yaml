@@ -1,0 +1,41 @@
+# PR Reviewer Configuration
+# Place this file at .reviews/config.yaml in your project root.
+
+# How aggressively to flag issues.
+#   strict   — Production repos. Flags style issues, enforces conventions hard.
+#   standard — Default. Balances thoroughness with pragmatism.
+#   relaxed  — Prototypes, experiments, hackathons. Only flags critical/warning.
+strictness: standard
+
+# Glob patterns for paths to skip during review.
+# These files won't be analyzed in any pass.
+ignored_paths:
+  # - "*.generated.ts"
+  # - "vendor/**"
+  # - "dist/**"
+  # - "*.min.js"
+  # - "package-lock.json"
+  # - "yarn.lock"
+
+# Project-specific rules to enforce.
+# Each rule is checked during the Style & Consistency pass.
+# Write them as plain English descriptions — the reviewer will interpret them.
+custom_rules:
+  # - "All API routes must use authMiddleware"
+  # - "No direct database queries outside src/data/"
+  # - "React components must use the useTranslation hook for user-facing strings"
+  # - "All public functions must have JSDoc comments"
+
+# Which analysis passes to run. Default: all four.
+# Options: security, logic, style, performance
+focus_areas:
+  - security
+  - logic
+  - style
+  - performance
+
+# Changelog entry style.
+#   keep-a-changelog — Groups by Added/Changed/Fixed/Removed/Security/Deprecated
+#   conventional     — Uses conventional commit prefixes (feat, fix, chore, etc.)
+#   simple           — Flat bullet list, no categories
+changelog_style: keep-a-changelog
