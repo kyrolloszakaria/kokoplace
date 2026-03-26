@@ -38,6 +38,24 @@ your-project/
 
 → [View skill](skills/project-architect/)
 
+### 📝 `researcher`
+**Write publication-ready LaTeX papers for ACM ICMI 2026 (and similar conferences).**
+
+This skill turns Claude into an academic co-author that works incrementally alongside your research project. It reads your codebase, experiment logs, and existing `Paper.tex` (from Overleaf), then writes or improves sections in proper ACM `sigconf` LaTeX — with human-quality prose that doesn't read like AI output.
+
+Key capabilities:
+- **Incremental writing** — improves existing content on each invocation, marks incomplete areas with `% TODO` comments
+- **Overleaf-native** — preprocesses your Overleaf project, auto-detects the right compiler (pdfLaTeX/XeLaTeX/LuaLaTeX), and compiles to verify
+- **Conference-aware** — tone calibration per section, ACM citation style (`\citet`/`\citep`), `booktabs` tables, proper `\Description{}` tags
+- **Proactive revisions** — flags stale results, code-paper drift, and structural issues
+- **Ethics & Broader Impact** — guidance tied to the ICMI 2026 theme ("Context and Cultural Awareness for Multimodal Interaction")
+
+Bundled references: `icmi2026-latex.md` (template + submission details) and `paper-structure.md` (section-by-section writing guide).
+
+**Triggers:** *"write my paper"*, *"help with the introduction"*, *"ICMI submission"*, *"turn this project into a paper"*, *"update the results section"*
+
+→ [Download skill](skills/researcher.skill)
+
 ---
 
 ## 🚀 Installation
@@ -62,7 +80,8 @@ unzip project-architect.skill -d .claude/skills/project-architect/
 
 | Skill | Download | Description |
 |-------|----------|-------------|
-| project-architect | [⬇ .skill](releases/) | Multi-agent project onboarding |
+| project-architect | [⬇ .skill](skills/project-architect.skill) | Multi-agent project onboarding |
+| researcher | [⬇ .skill](skills/researcher.skill) | ACM ICMI 2026 LaTeX paper writing |
 
 ---
 
